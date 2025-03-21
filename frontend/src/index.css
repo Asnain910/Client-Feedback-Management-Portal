@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Base Styles */
+body {
+  @apply bg-gradient-to-b from-gray-100 to-blue-50 text-gray-900 antialiased;
+  margin: 0;
+  font-family: 'Poppins', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  @apply bg-gray-100 p-1 rounded text-red-600;
+}
+
+/* Custom Components */
+
+/* Form Styles */
+.form-container {
+  @apply max-w-md mx-auto bg-white shadow-md rounded-lg p-6;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.form-container input,
+.form-container textarea {
+  @apply w-full p-3 border border-gray-300 rounded focus:ring focus:ring-blue-400 focus:outline-none focus:border-blue-400;
+}
+
+.form-container button {
+  @apply w-full p-3 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-600 active:scale-95 transition-transform duration-300 ease-in-out;
+}
+
+/* Table Styles */
+.table {
+  @apply w-full table-auto bg-white shadow-md rounded-lg overflow-hidden;
+}
+
+.table th {
+  @apply bg-blue-500 text-white py-3 px-4 text-left font-semibold uppercase;
+}
+
+.table td {
+  @apply border-t border-gray-200 py-3 px-4 text-gray-800;
+}
+
+.table tr:hover td {
+  @apply bg-blue-50;
+}
+
+/* Buttons */
+.btn {
+  @apply px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow hover:bg-blue-600 active:scale-95 transition-transform duration-300 ease-in-out;
+}
+
+.btn-secondary {
+  @apply px-6 py-2 bg-gray-500 text-white font-semibold rounded-lg shadow hover:bg-gray-600 active:scale-95 transition-transform duration-300 ease-in-out;
+}
+
+/* Headings */
+h1 {
+  @apply text-4xl font-extrabold text-center text-blue-600 mb-6;
+}
+
+h2 {
+  @apply text-2xl font-bold text-blue-500 mb-4;
+}
+
+h3 {
+  @apply text-xl font-semibold text-gray-700 mb-2;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Utility Classes */
+.card {
+  @apply bg-white shadow-md rounded-lg p-4 transition-transform duration-300 ease-in-out hover:scale-105;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4;
+}
